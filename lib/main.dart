@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
+String getFullName(String firstName, String lastName) {
+  return '$firstName $lastName';
+}
+
 void main() {
+  final name = 'Foo';
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of your applicationss.
   @override
   Widget build(BuildContext context) {
+    print(getFullName('Mattias', 'Velamsson'));
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
