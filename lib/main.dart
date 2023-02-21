@@ -1,27 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  final name = 'Foo';
   runApp(const MyApp());
 }
 
-class Cat extends Object {
+class Cat {
   final String name;
   Cat(this.name);
-
-  @override
-  bool operator ==(covariant Cat other) => other.name == name;
-
-  @override
-  // TODO: implement hashCode
-  int get hashCode => super.hashCode;
 }
 
 void test() {
-  final cat1 = Cat("Sixten");
-  final cat2 = Cat("Yoda");
-
-  // It will go through each of these, from the left, and pick the first one that is not null.
+  final meow = Cat('Yoda');
+  print(meow.name);
 }
 
 class MyApp extends StatelessWidget {
@@ -30,6 +20,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your applicationss.
   @override
   Widget build(BuildContext context) {
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
