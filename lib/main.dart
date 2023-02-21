@@ -9,9 +9,27 @@ class Cat {
   Cat(this.name);
 }
 
+class Person {
+  final String firstName;
+  final String lastName;
+  Person(this.firstName, this.lastName);
+}
+
+extension FullName on Person {
+  String get fullName => '$firstName $lastName';
+}
+
+extension Run on Cat {
+  void run() {
+    print('Cat $name is running');
+  }
+}
+
 void test() {
-  final meow = Cat('Yoda');
-  print(meow.name);
+  final cat1 = Cat('Yoda');
+  final person1 = Person('Mattias', 'Velamsson');
+  print(person1.fullName);
+  cat1.run();
 }
 
 class MyApp extends StatelessWidget {
